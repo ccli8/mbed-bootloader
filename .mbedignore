@@ -21,7 +21,6 @@ mbed-os/features/filesystem/littlefs/*
 mbed-os/features/filesystem/fat/*
 mbed-os/features/device_key/*
 mbed-os/components/wifi/*
-mbed-os/components/storage/*
 mbed-os/features/frameworks/mbed-client-cli/*
 mbed-os/features/lwipstack/*
 mbed-os/features/nfc/*
@@ -72,3 +71,7 @@ mbed-cloud-client/ns-hal-pal/*
 mbed-cloud-client/sal-stack-nanostack-eventloop/*
 mbed-cloud-client/source/*
 mbed-cloud-client/certificate-enrollment-client/*
+mbed-os/components/802.15.4_RF/*
+mbed-os/features/storage/kvstore/*
+mbed-os/usb/*
+mbed-os/targets/TARGET_NUVOTON/TARGET_M2351/TARGET_NUMAKER_PFM_M2351/TARGET_M23_NS/*

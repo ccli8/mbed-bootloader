@@ -205,6 +205,91 @@
               "PAL_USE_HW_RTC=0",
               "PAL_INT_FLASH_NUM_SECTIONS=2"
             ]
+        },
+        "NUMAKER_PFM_NUC472": {
+            "flash-start-address"               : "0x0",
+            "flash-size"                        : "(512*1024)",
+            "nvstore.area_1_address"            : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x10000)",
+            "nvstore.area_1_size"               : "0x1000",
+            "nvstore.area_2_address"            : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x11000)",
+            "nvstore.area_2_size"               : "0x1000",
+            "update-client.application-details" : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x12000)",
+            "application-start-address"         : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x12400)",
+            "max-application-size"              : "DEFAULT_MAX_APPLICATION_SIZE",
+
+            "target.components_add"             : ["NUSD"],
+
+            "target.macros_add": [
+                "PAL_INT_FLASH_NUM_SECTIONS=2",
+                "PAL_USE_INTERNAL_FLASH=1",
+                "PAL_USE_HW_ROT=0",
+                "PAL_USE_HW_RTC=1"
+            ]
+        },
+        "NUMAKER_PFM_M487": {
+            "flash-start-address"               : "0x0",
+            "flash-size"                        : "(512*1024)",
+            "nvstore.area_1_address"            : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x10000)",
+            "nvstore.area_1_size"               : "0x1000",
+            "nvstore.area_2_address"            : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x11000)",
+            "nvstore.area_2_size"               : "0x1000",
+            "update-client.application-details" : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x12000)",
+            "application-start-address"         : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x12400)",
+            "max-application-size"              : "DEFAULT_MAX_APPLICATION_SIZE",
+
+            "target.components_add"             : ["NUSD"],
+
+            "target.macros_add": [
+                "PAL_INT_FLASH_NUM_SECTIONS=2",
+                "PAL_USE_INTERNAL_FLASH=1",
+                "PAL_USE_HW_ROT=0",
+                "PAL_USE_HW_RTC=1"
+            ]
+        },
+        "NUMAKER_IOT_M487": {
+            "flash-start-address"               : "0x0",
+            "flash-size"                        : "(512*1024)",
+            "nvstore.area_1_address"            : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x10000)",
+            "nvstore.area_1_size"               : "0x1000",
+            "nvstore.area_2_address"            : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x11000)",
+            "nvstore.area_2_size"               : "0x1000",
+            "update-client.application-details" : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x12000)",
+            "application-start-address"         : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x12400)",
+            "max-application-size"              : "DEFAULT_MAX_APPLICATION_SIZE",
+
+            "target.components_add"             : ["NUSD"],
+
+            "target.macros_add": [
+                "PAL_INT_FLASH_NUM_SECTIONS=2",
+                "PAL_USE_INTERNAL_FLASH=1",
+                "PAL_USE_HW_ROT=0",
+                "PAL_USE_HW_RTC=1"
+            ]
+        },
+        "NUMAKER_PFM_M2351": {
+            "flash-start-address"               : "0x10010000",
+            "flash-size"                        : "0x70000",
+            "nvstore.area_1_address"            : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x10000)",
+            "nvstore.area_1_size"               : "0x1000",
+            "nvstore.area_2_address"            : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x11000)",
+            "nvstore.area_2_size"               : "0x1000",
+            "update-client.application-details" : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x12000)",
+            "application-start-address"         : "(MBED_CONF_APP_FLASH_START_ADDRESS+0x12400)",
+            "max-application-size"              : "DEFAULT_MAX_APPLICATION_SIZE",
+
+            "target.components_add"             : ["NUSD"],
+
+            "target.mbed_rom_start"             : "0x10010000",
+            "target.mbed_rom_size"              : "0x70000",
+            "target.mbed_ram_start"             : "0x30002000",
+            "target.mbed_ram_size"              : "0x16000",
+
+            "target.macros_add": [
+                "PAL_INT_FLASH_NUM_SECTIONS=2",
+                "PAL_USE_INTERNAL_FLASH=1",
+                "PAL_USE_HW_ROT=0",
+                "PAL_USE_HW_RTC=1"
+            ]
         }
     }
 }
