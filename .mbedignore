@@ -37,3 +37,4 @@ mbed-os/usb/*
 mbed-os/targets/TARGET_Cypress/TARGET_PSOC6/TARGET_CY8CKIT_062_WIFI_BT_PSA/spm_init_api.c
 mbed-os/drivers/I2CSlave.cpp
 mbed-os/targets/TARGET_NXP/TARGET_MCUXpresso_MCUS/TARGET_LPC55S69/TARGET_M33_NS/device/cmsis_nvic_virtual.c                                                                        
+mbed-os/targets/TARGET_NUVOTON/TARGET_M2351/TARGET_NUMAKER_PFM_M2351/TARGET_M23_NS/*

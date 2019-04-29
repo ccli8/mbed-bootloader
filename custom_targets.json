@@ -1,0 +1,18 @@
+{
+    "NUMAKER_PFM_M2351_ROM-64-448_RAM-8-88": {
+        "inherits"              : ["NUMAKER_PFM_M2351"],
+
+        "mbed_rom_start"        : "0x10010000",
+        "mbed_rom_size"         : "0x70000",
+        "mbed_ram_start"        : "0x30002000",
+        "mbed_ram_size"         : "0x16000"
+    },
+    "NUMAKER_PFM_M2351_ROM-64-448_RAM-16-80": {
+        "inherits"              : ["NUMAKER_PFM_M2351"],
+
+        "mbed_rom_start"        : "0x10010000",
+        "mbed_rom_size"         : "0x70000",
+        "mbed_ram_start"        : "0x30004000",
+        "mbed_ram_size"         : "0x14000"
+    }
+}

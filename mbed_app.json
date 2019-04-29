@@ -89,8 +89,6 @@
             "update-client.storage-size"               : "((MBED_ROM_START + MBED_ROM_SIZE - MBED_CONF_MBED_BOOTLOADER_APPLICATION_START_ADDRESS) * MBED_CONF_UPDATE_CLIENT_STORAGE_LOCATIONS)",
             "update-client.storage-locations"          : 1,
             "update-client.firmware-header-version"    : "2",
-            "target.components_add"                    : ["SD"],
-            "sd.CRC_ENABLED"                           : 0,
             "storage.storage_type"                     : "FILESYSTEM",
             "storage_filesystem.internal_base_address" : "(MBED_ROM_START + MBED_BOOTLOADER_SIZE)",
             "update-client.application-details"        : "(MBED_CONF_STORAGE_FILESYSTEM_INTERNAL_BASE_ADDRESS + MBED_CONF_STORAGE_FILESYSTEM_RBP_INTERNAL_SIZE)",
@@ -197,13 +195,19 @@
                                                              ]
         },
         "K64F": {
-            "storage_filesystem.rbp_internal_size"     : "(2*4*1024)"
+            "storage_filesystem.rbp_internal_size"     : "(2*4*1024)",
+            "target.components_add"                    : ["SD"],
+            "sd.CRC_ENABLED"                           : 0
         },
         "K66F": {
-            "storage_filesystem.rbp_internal_size"     : "(2*4*1024)"
+            "storage_filesystem.rbp_internal_size"     : "(2*4*1024)",
+            "target.components_add"                    : ["SD"],
+            "sd.CRC_ENABLED"                           : 0
         },
         "KW24D": {
             "storage_filesystem.rbp_internal_size"     : "(2*2*1024)",
+            "target.components_add"                    : ["SD"],
+            "sd.CRC_ENABLED"                           : 0,
             "sd.SPI_CS"                                : "PTC4",
             "sd.SPI_MOSI"                              : "PTC6",
             "sd.SPI_MISO"                              : "PTC7",
@@ -211,28 +215,40 @@
         },
         "NUCLEO_L476RG": {
             "storage_filesystem.rbp_internal_size"     : "(2*2*1024)",
-            "mbed-bootloader.application-start-address": "(MBED_ROM_START+38*1024)"
+            "mbed-bootloader.application-start-address": "(MBED_ROM_START+38*1024)",
+            "target.components_add"                    : ["SD"],
+            "sd.CRC_ENABLED"                           : 0
         },
         "DISCO_L476VG": {
             "storage_filesystem.rbp_internal_size"     : "(2*2*1024)",
-            "mbed-bootloader.application-start-address": "(MBED_ROM_START+38*1024)"
+            "mbed-bootloader.application-start-address": "(MBED_ROM_START+38*1024)",
+            "target.components_add"                    : ["SD"],
+            "sd.CRC_ENABLED"                           : 0
         },
         "DISCO_L475VG_IOT01A": {
             "storage_filesystem.rbp_internal_size"     : "(2*2*1024)",
-            "mbed-bootloader.application-start-address": "(MBED_ROM_START+38*1024)"
+            "mbed-bootloader.application-start-address": "(MBED_ROM_START+38*1024)",
+            "target.components_add"                    : ["SD"],
+            "sd.CRC_ENABLED"                           : 0
         },
         "NUCLEO_F411RE": {
             "storage_filesystem.rbp_internal_size"     : "(2*16*1024)",
+            "target.components_add"                    : ["SD"],
+            "sd.CRC_ENABLED"                           : 0,
             "sd.SPI_CS"                                : "PB_9",
             "sd.SPI_MOSI"                              : "PC_3",
             "sd.SPI_MISO"                              : "PC_2",
             "sd.SPI_CLK"                               : "PC_7"
         },
         "NUCLEO_F429ZI": {
-            "storage_filesystem.rbp_internal_size"     : "(2*16*1024)"
+            "storage_filesystem.rbp_internal_size"     : "(2*16*1024)",
+            "target.components_add"                    : ["SD"],
+            "sd.CRC_ENABLED"                           : 0
         },
         "NUCLEO_F207ZG": {
             "storage_filesystem.rbp_internal_size"     : "(2*16*1024)",
+            "target.components_add"                    : ["SD"],
+            "sd.CRC_ENABLED"                           : 0,
             "sd.SPI_MOSI"                              : "PC_12",
             "sd.SPI_MISO"                              : "PC_11",
             "sd.SPI_CLK"                               : "PC_10",
@@ -240,10 +256,14 @@
         },
         "UBLOX_EVK_ODIN_W2": {
             "target.device_has_remove": ["EMAC"],
-            "storage_filesystem.rbp_internal_size"     : "(2*16*1024)"
+            "storage_filesystem.rbp_internal_size"     : "(2*16*1024)",
+            "target.components_add"                    : ["SD"],
+            "sd.CRC_ENABLED"                           : 0
         },
         "UBLOX_C030_U201": {
-            "storage_filesystem.rbp_internal_size"     : "(2*16*1024)"
+            "storage_filesystem.rbp_internal_size"     : "(2*16*1024)",
+            "target.components_add"                    : ["SD"],
+            "sd.CRC_ENABLED"                           : 0
         },
         "NRF52840_DK": {
             "storage_filesystem.internal_base_address" : "(1016*1024)",
@@ -255,12 +275,69 @@
             "update-client.storage-size"               : "(1024*1024*1)",
             "update-client.storage-locations"          : 1,
             "update-client.storage-page"               : 1,
+            "target.components_add"                    : ["SD"],
+            "sd.CRC_ENABLED"                           : 0,
             "sd.SPI_CS"                                : "A0",
             "sd.SPI_MOSI"                              : "A1",
             "sd.SPI_MISO"                              : "A2",
             "sd.SPI_CLK"                               : "A3",
             "target.features_remove"                   : ["CRYPTOCELL310"],
             "target.macros_remove"                     : ["MBEDTLS_CONFIG_HW_SUPPORT"]
+        },
+        "NUMAKER_PFM_NUC472": {
+            "mbed-bootloader.bootloader-size"           : "(64*1024)",
+            "storage.storage_type"                      : "FILESYSTEM",
+            "storage_filesystem.filesystem"             : "LITTLE",
+            "storage_filesystem.blockdevice"            : "other",
+            "storage_filesystem.internal_base_address"  : "(MBED_ROM_START + MBED_BOOTLOADER_SIZE)",
+            "storage_filesystem.rbp_internal_size"      : "(2*4*1024)",
+            "storage_filesystem.external_base_address"  : "(0x0)",
+            "storage_filesystem.external_size"          : "(1024*1024*64)",
+            "target.components_add"                     : ["NUSD"]
+        },
+        "NUMAKER_PFM_M487": {
+            "mbed-bootloader.bootloader-size"           : "(64*1024)",
+            "storage.storage_type"                      : "FILESYSTEM",
+            "storage_filesystem.filesystem"             : "LITTLE",
+            "storage_filesystem.blockdevice"            : "other",
+            "storage_filesystem.internal_base_address"  : "(MBED_ROM_START + MBED_BOOTLOADER_SIZE)",
+            "storage_filesystem.rbp_internal_size"      : "(2*4*1024)",
+            "storage_filesystem.external_base_address"  : "(0x0)",
+            "storage_filesystem.external_size"          : "(1024*1024*64)",
+            "target.components_add"                     : ["NUSD"]
+        },
+        "NUMAKER_IOT_M487": {
+            "mbed-bootloader.bootloader-size"           : "(64*1024)",
+            "storage.storage_type"                      : "FILESYSTEM",
+            "storage_filesystem.filesystem"             : "LITTLE",
+            "storage_filesystem.blockdevice"            : "other",
+            "storage_filesystem.internal_base_address"  : "(MBED_ROM_START + MBED_BOOTLOADER_SIZE)",
+            "storage_filesystem.rbp_internal_size"      : "(2*4*1024)",
+            "storage_filesystem.external_base_address"  : "(0x0)",
+            "storage_filesystem.external_size"          : "(1024*1024*64)",
+            "target.components_add"                     : ["NUSD"]
+        },
+        "NUMAKER_PFM_M2351_ROM-64-448_RAM-8-88": {
+            "mbed-bootloader.bootloader-size"           : "(64*1024)",
+            "storage.storage_type"                      : "FILESYSTEM",
+            "storage_filesystem.filesystem"             : "LITTLE",
+            "storage_filesystem.blockdevice"            : "other",
+            "storage_filesystem.internal_base_address"  : "(MBED_ROM_START + MBED_BOOTLOADER_SIZE)",
+            "storage_filesystem.rbp_internal_size"      : "(2*4*1024)",
+            "storage_filesystem.external_base_address"  : "(0x0)",
+            "storage_filesystem.external_size"          : "(1024*1024*64)",
+            "target.components_add"                     : ["NUSD"]
+        },
+        "NUMAKER_PFM_M2351_ROM-64-448_RAM-16-80": {
+            "mbed-bootloader.bootloader-size"           : "(64*1024)",
+            "storage.storage_type"                      : "FILESYSTEM",
+            "storage_filesystem.filesystem"             : "LITTLE",
+            "storage_filesystem.blockdevice"            : "other",
+            "storage_filesystem.internal_base_address"  : "(MBED_ROM_START + MBED_BOOTLOADER_SIZE)",
+            "storage_filesystem.rbp_internal_size"      : "(2*4*1024)",
+            "storage_filesystem.external_base_address"  : "(0x0)",
+            "storage_filesystem.external_size"          : "(1024*1024*64)",
+            "target.components_add"                     : ["NUSD"]
         }
     }
 }
